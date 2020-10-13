@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+  <head>
+<title>Anima | tion</title>>
+<link rel = "icon" href ="wallpaper.jpg"type="image/x-icon"> 
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+	img {
+  opacity: 1.0;
+}
+img:hover {
+  opacity: 0.5;
+}
+.loader {
+  border: 16px solid #888585;
+  border-radius: 50%;
+  border-top: 16px solid rgb(2, 2, 10);
+  border-bottom: 16px solid rgb(255, 0, 0);
+  width: 120px;
+  height: 120px;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+}
+
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+* {
+  box-sizing: border-box;
+}
+div {
+  width: 50%;
+  padding: 20px;
+  border: 10px solid rgb(41, 40, 40);
+  margin: auto;
+}
+div {
+  background-image: url('gif.gif');
+}
+
+a:link {
+  color: red;
+}
+a:visited {
+  color: green;
+}
+a:hover {
+  color: hotpink;
+}
+a:active {
+  color: blue;
+}
+@media screen and (min-width: 480px) {
+  body {
+    background-color: #888585;
+  }
+}
+</style>
+</head>
+
+<body>
+  
+  <a class="blog-logo" href="index.html" target="blank">HOME</a>
+
+<div class="loader"></div>
+<h1 style="text-align:center;">Zeus | Pubg</h1> 
+<div style="text-align:center"> 
+	<button onclick="playPause()">Play/Pause</button> 
+	<button onclick="makeBig()">Big</button>
+	<button onclick="makeSmall()">Small</button>
+	<button onclick="makeNormal()">Normal</button>
+	<br><br>
+	<video id="video1" width="420">
+	  <source src="C:\Users\SFSA4\Desktop\PUBG\Zeus_1.mp4" type="video/mp4">
+	  
+	  Your browser does not support HTML video.
+	</video>
+  </div> 
+  <script>
+	  var myVideo = document.getElementById("video1"); 
+
+function playPause() { 
+  if (myVideo.paused) 
+    myVideo.play(); 
+  else 
+    myVideo.pause(); 
+} 
+
+function makeBig() { 
+    myVideo.width = 560; 
+} 
+
+function makeSmall() { 
+    myVideo.width = 320; 
+} 
+
+function makeNormal() { 
+    myVideo.width = 420; 
+} 
+</script>
+
+<h1>The Image</h1>
+<img src="wallpaper.jpg" alt="wallpaper" width="390" height="300">
+  
+</body>
+</html>
