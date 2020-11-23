@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<style>
+h1,p{
+  text-align:center; 
+}
+table,th,td {
+  border : 2px solid black;
+   margin-left: auto;
+  margin-right: auto;
+}
+th,td {
+  padding: 9px;
+}
+</style>
+<body>
+<h1>Welcome to the fashion world</h1>
+<p>Click on an item  to get details of what you like</p>
+<p id='showtrc'></p>
+<table id="demo"></table>
+<select id="dem" onchange="show()">
+        <option value="Select Color">Select Color</option>
+        <option value="yellow">Yellow</option>
+        <option value="pink">Pink</option>
+        <option value="orange">Orange</option>
+    </select>
+<script>
+var x,xmlhttp,xmlDoc
+xmlhttp = new XMLHttpRequest();
+xmlhttp.open("GET", "indexdom.xml", false);
+xmlhttp.send();
+xmlDoc = xmlhttp.responseXML; 
+x = xmlDoc.getElementsByTagName("fashion");
+table="<tr><th>ITEM</th><th>CATEGORY</th></tr>";
+for (i = 0; i <x.length; i++) { 
+  table += "<tr onclick='displaytrack(" + i + ")'><td>";
+  table += x[i].getElementsByTagName("item")[0].childNodes[0].nodeValue;
+  table += "</td><td>";
+  table +=  x[i].getElementsByTagName("category")[0].childNodes[0].nodeValue;
+  table += "</td></tr>";
+}
+document.getElementById("demo").innerHTML = table;
+
+function displaytrack(i) {
+  document.getElementById("showtrc").innerHTML =
+  "FASHION: " +
+  x[i].getElementsByTagName("item")[0].childNodes[0].nodeValue +
+  "<br>CATEGORY: " +
+  x[i].getElementsByTagName("category")[0].childNodes[0].nodeValue +
+  "<br>SIZE: " + 
+  x[i].getElementsByTagName("size")[0].childNodes[0].nodeValue +
+  "<br>PRICE: " +
+  x[i].getElementsByTagName("price")[0].childNodes[0].nodeValue;
+}
+
+        function show()
+        {
+            var value=document.getElementById("dem").value;
+            if(value!="Select Color")
+            {
+                document.bgColor=value;
+                document.cookie="color="+value+";expires=Fri,1 Aug 1970 01:00:00 UTC;";
+            }
+        }
+        window.onload=function()
+        {
+            if(document.cookie.length!=0)
+            {
+                var a=document.cookie.split("=");
+                document.getElementById("dem").value=a[1];
+                document.bgColor=a[1];
+            }
+        }
+    </script>
+
+</body>
+</html>
