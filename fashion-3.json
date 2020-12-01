@@ -1,0 +1,27 @@
+
+[
+    {
+      "name": "THE BURNOUT",
+      "artist" : "LEONARDO DA VINCI",
+     "detail": {
+        "rate": ["25000"]
+        
+      }
+    },
+    {
+      "name": "CIVIL MEDIA",
+      "artist" : "JAN VERMEER",
+     "detail": {
+        "rate": ["25000"]
+        
+      }
+    },
+    {
+      "name": "Jaguar print",
+      "artist" : "PICASSO",
+      "detail": {
+        "rate": ["25000"]
+        
+      }
+    }
+  ]

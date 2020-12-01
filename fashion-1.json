@@ -1,0 +1,27 @@
+
+[
+    {
+      "name": "Pastel Bucket Hats",
+      "artist" : "LEONARDO DA VINCI",
+      "detail": {
+        "rate": [" 25000"]
+        
+      }
+    },
+    {
+      "name": "Square-Toed Heels",
+      "artist" : "EDVARD MUNCH",
+      "detail": {
+        "rate": [" 25000"]
+        
+      }
+    },
+    {
+      "name": "Matching Printed Tops and Stockings",
+      "artist" : "MICHELANGELO",
+  "detail": {
+        "rate": [" 25000"]
+        
+      }
+    }
+  ]

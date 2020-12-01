@@ -1,0 +1,26 @@
+[
+    {
+      "name": "Chunky Boots with Feminine Dresses",
+      "artist" : "VINCENT VAN GOGH",
+     "detail": {
+        "rate": [" 25000"]
+        
+      }
+    },
+    {
+      "name": "Faux Leather Jumpsuits and Boilersuits",
+      "artist" : "RENE MAGRITTE",
+     "detail": {
+        "rate": [" 25000"]
+        
+      }
+    },
+    {
+      "name": "GREEN PRESSURE",
+      "artist" : "CLAUDE MONET",
+     "detail": {
+        "rate": [" 25000"]
+        
+      }
+    }
+  ]
