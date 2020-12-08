@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <link rel="stylesheet" href="tt.css">
+    <script src="https://code.angularjs.org/1.2.16/angular.js"></script>
+    <script src="tt.js"></script>
+  </head>
+
+  <body ng-app="App">
+    <br><h1>WEAR YOUR FaShion HERE.......</h1><br><br>
+
+
+  <div ng-controller="CrudCtrl">
+    <table>
+      <tr>
+        <td>Trend</td>
+        <td>Designer</td>
+        <td>Price</td>
+        <td><span ng-click="add()">Add New</span></td>
+      </tr>
+      <tr ng-repeat="fashion in fashions">
+        <td>
+          <input type="text" ng-model="fashion.name" ng-show="fashion.editable">
+          <span ng-hide="fashion.editable">{{ fashion.name }}</span>
+        </td>
+        <td>
+          <input type="text" ng-model="fashion.designer" ng-show="fashion.editable">
+          <span ng-hide="fashion.editable">{{ fashion.designer }}</span>
+        </td>
+        <td>
+            <input type="number" ng-model="fashion.price" ng-show="fashion.editable">
+            <span ng-hide="fashion.editable">{{ fashion.price }}</span>
+          </td>
+          <td>
+          <span ng-click="edit($index)" ng-hide="fashion.editable">Edit</span>
+          <span ng-click="save($index)" ng-show="fashion.editable">Save</span>
+          <span ng-click="delete($index)"> | Delete</span>
+        </td>
+      </tr>
+    </table>
+  </div>
+  </body>
+
+</html>
